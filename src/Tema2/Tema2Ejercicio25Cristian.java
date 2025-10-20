@@ -18,8 +18,8 @@ public class Tema2Ejercicio25Cristian {
             }
         }
 
-        if (num < 0) {
-            System.out.println("No se puede hacer factorial de números negativos.");
+        if (num <= 0) {
+            System.out.println("No se puede hacer factorial de números negativos o de 0.");
         } else {
             long factorial = 1;
             for (int num2 = 1; num2 <= num; num2++) {
