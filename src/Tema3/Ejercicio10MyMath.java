@@ -8,12 +8,13 @@ public class Ejercicio10MyMath {
         System.out.println("1. Perimetro y area del cuadrado.");
         System.out.println("2. Perimetro y area del rectangulo.");
         System.out.println("3. Perimetro y area del circulo.");
-        System.out.println("4. Conversor de euros a dólares y de dólares a euros.");
-        System.out.println("5. Mostrar tabla de multiplicar de un número");
-        System.out.println("6. Mostrar tablas de multiplicar del 1 al 10");
-        System.out.println("7. Comprobador de números primos.");
-        System.out.println("8. Comprobador de fechas.");
-        System.out.println("9. Dibujar triángulos.");
+        System.out.println("4. Numero primo o no primo.");
+        System.out.println("5. Numero de digitos.");
+        System.out.println("6. Numero de digitos pares e impares.");
+        System.out.println("7. Factorial de un numero.");
+        System.out.println("7. Factorial recursivo de un numero.");
+        System.out.println("9. Operacion segundo grado.");
+        System.out.println("10. Suma digitos de numero entero.");
         System.out.println("0. Salir");
         System.out.print("Elige una opción: ");
     }
@@ -63,16 +64,44 @@ public class Ejercicio10MyMath {
                 break;
 
                 case 6:
-                System.out.println("Dígitos pares en 48291: " + MyMath.digitosPares(48291));
-                System.out.println("Dígitos impares en 48291: " + MyMath.digitosImpares(48291));
+                    System.out.println("Introduce un numero y te dire los digitos pares e impares que tiene dicho numero");
+                    int digitos= sc.nextInt();
+                System.out.println("Dígitos pares: " + MyMath.digitosPares(digitos));
+                System.out.println("Dígitos impares: " + MyMath.digitosImpares(digitos));
+                break;
 
-                System.out.println("Factorial de 5: " + MyMath.factorial(5));
-                System.out.println("Factorial recursivo de 5: " + MyMath.factorialRecursivo(5));
+                case 7:
+                    System.out.println("Introduce un numero y te sacare su factorial");
+                    int fact= sc.nextInt();
+                System.out.println("Factorial de 5: " + MyMath.factorial(fact));
+                break;
 
-                System.out.println("Soluciones de x^2 + 2x - 3 = 0: " +
-                        MyMath.solucionesEcuacion2(1, 2, -3));
+                case 8:
+                    System.out.println("Introduce un numero y te sacare su factorial recursivo");
+                    int fac=sc.nextInt();
+                System.out.println("Factorial recursivo de 5: " + MyMath.factorialRecursivo(fac));
+                break;
 
-                System.out.println("Suma de dígitos de 987: " + MyMath.sumaDigitos(987));
+                case 9:
+                    System.out.println("Este programa sirve para hacer una ecuacion de segundo grado, a continuacion...");
+                    System.out.println("Introduce el primero numero");
+                    int prim =sc.nextInt();
+                    System.out.println("Introduce el segundo numero");
+                    int seg =sc.nextInt();
+                    System.out.println("Introduce el tercer numero");
+                    int ter =sc.nextInt();
+                    int soluciones = MyMath.solucionesEcuacion2(prim, seg, ter);
+                System.out.println("Solucion posibles " + soluciones);
+                break;
+
+                case 10:
+                    System.out.println("Introduce un numero y sumare sus digitos (130=1+3+0)");
+                    int digi=sc.nextInt();
+                System.out.println("Suma de dígitos: " + MyMath.sumaDigitos(digi));
+                    break;
+                case 0:
+                default:
+                    System.out.println("Cerrando el programa...");
             }
         }while (opcion !=0);
     }
