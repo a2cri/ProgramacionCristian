@@ -1,0 +1,4 @@
+
+Nombre: paco, Edad: 10
+Nombre: a, Edad: 2
+Nombre: kjdskg, Edad: 30945
